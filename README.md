@@ -1,2 +1,1 @@
-# websockets-playlist
-All the course files for the WebSockets playlist on The Net Ninja YouTube channel.
+Hospital management system with socket programming to enable communication with several computers on the computer network to be used by either nurses for updating vitals of patients, or doctors for viewing patients' vitals
