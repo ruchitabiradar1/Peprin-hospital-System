@@ -1,0 +1,27 @@
+<head>
+	<meta charset="utf-8">
+	<title>Doctor login</title>
+	<link href="/login.css" rel="stylesheet" />
+  </head>
+<div class="blurdoc"  ></div>
+<div class="form1">
+  <form method="post" action="/doclogin">
+	
+		<h1>LOGIN</h1>
+	  
+	  <input type="text" placeholder="Enter Email-id" class="log" name="uname" required>
+		<br>
+	  <br>
+	  <input type="password" placeholder="Enter Password" class="log" name="psw" required>
+		<hr>
+		<div style='color:thistle;font-size: 30px;'>
+			<b> <% if(details!=null) { %>
+  
+				 <%=details%>
+				 <% } %>
+			</b></div>
+			<hr>
+	  <button class="btn">Login</button>
+
+  </form>
+</div>

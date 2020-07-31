@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="details.css" rel="stylesheet">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+
+</head>
+<body>
+
+	<div class="topnav">
+		<a href="home">Home</a>
+		<a href="index"  style="float:right;">Logout</a>
+		
+	  </div> 
+	  <div class="blurpreg"></div>
+		<div class="container"><br>
+			
+			<h1 class="text-success text-center"> Patient Details </h1><br>
+			<div class="col-lg-8 m-auto d-block">
+				
+				<form  method="post" ngNativeValidate action="/preg" class="bg-light">
+
+					<div class="form-group">
+					<label><b>Patient Name</b></label>
+                    <input type="text" name="user" class="form-control" id="user" onkeypress="return /[A-Za-z]/i.test(event.key)" autocomplete="off" required="">
+                    </div>
+					<br>
+
+					<div class="form-group">
+					<br><label><b>Gender</b></label><br>
+					<input type="radio" id="male" name="gender" value="Male" required>
+					<label for="male">Male</label><br>
+					<input type="radio" id="female" name="gender" value="Female" required>
+					<label for="female">Female</label>
+				    </div>
+  					<br>
+
+  					<div class="form-group">
+  					<br><label for="birthday"><b>Date of Birth</b> </label> <br>
+					<input type="date" id="birthday" name="birthday" class="form-control" oninput="func()" required>
+					</div>
+				    <br>
+
+				    <div class="form-group">
+					<br><label><b>Phone Number</b></label>
+                    <input type="text" min=0 minlength="10" maxlength="10" name="phone" class="form-control" id="phone" onkeypress="return /[0-9]/i.test(event.key)"   autocomplete="off" required>
+					</div>
+					<br>
+				    
+
+					<div class="form-group">
+					<br><label><b>Patient Height(in cm)</b></label>
+                    <input type="Number" min=0 name="height" class="form-control" id="height"  autocomplete="off" required>
+					</div>
+					<br>
+
+					<div class="form-group">
+					<br><label><b>Patient Weight(in kg)</b></label>
+					<input type="Number" min=0 name="weight" class="form-control" id="weight"  autocomplete="off" required>
+					</div>
+					<br>
+
+					<h2>Patient Medical History</h2>
+					<div class="form-group">
+					<label><b>Please list any drug allergies</b></label>
+					<input type="text" name="allergy" class="form-control" id="allergy"  autocomplete="off">
+					</div>
+					<br>
+
+					<div class="form-group">
+					<br><label><b>Have/Had any of the following?(Please click all that apply)</b></label><br>
+					<input type="checkbox" id="asthma" name="disease" value="Asthma">
+					<label for="asthma">Asthma</label><br>
+					<input type="checkbox" id="cancer" name="disease" value="Cancer">
+					<label for="cancer">Cancer</label><br>
+					<input type="checkbox" id="diabetes" name="disease" value="Diabetes">
+					<label for="diabetes">Diabetes</label><br>
+					<input type="checkbox" id="heart" name="disease" value="Heart">
+					<label for="heart">Heart Disease</label><br>
+					<input type="checkbox" id="lung" name="disease" value="Lung Disease">
+					<label for="lung">Lung Disease</label>
+					<input type="checkbox" id="NA" name="disease" value="NA">
+					<label for="lung">NA</label>
+					</div>
+					<br>
+
+					<div class="form-group">
+					<br><label><b>Other Illnesses</b></label>
+					<input type="text" name="illness" class="form-control" id="illness"  autocomplete="off">
+					</div>
+					<br>
+
+					
+					<div class="form-group">
+					<br><label><b>Any other comments</b></label>
+					<input type="text" name="comment" class="form-control" id="comment"  autocomplete="off">
+					</div>
+					<br> 
+
+					<div style='color: crimson;'>
+						<b> <% if(details!=null) { %>
+			 
+							 <%=details%>
+							 <% } %>
+						</b>
+					</div>
+					
+					<button type="submit" name="Submit" class="btn" >Submit</button>
+
+				</form>
+			</div>
+		</div>
+		
+</body>
+<script>
+	function func(){
+    var gen=document.getElementsByName("gender");
+    for(i=0;i<gen.length;i++){
+      if(gen[i].checked)
+      {  gen[(i+1)%2].removeAttribute('required');
+      }
+    }
+  }
+</script>
+</html>

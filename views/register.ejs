@@ -1,0 +1,38 @@
+<head>
+	<meta charset="utf-8">
+	<title>Doctor login</title>
+	<link href="/login.css" rel="stylesheet" />
+  </head>
+<div class="blureg"  ></div>
+<div class="form2">
+  <form method="post" action="/registers">
+	
+		<h1>Register</h1>
+	  
+	  <input type="text" placeholder="Enter Name" class="log" name="name" required>
+		<br>
+    
+    <label class="radio-inline">
+    Nurse <input type="radio" value="nurse" name="position" class="rad" required>
+    </label>
+    </label class="radio-inline">
+    <br>
+    <label >
+      
+    Doctor<input type="radio" value="doctor" name="position" class="rad" required>
+    </label>
+    <input type="text" placeholder="Enter Email" name="email" class="log" pattern="[a-zA-z0-9_]+[@][a-z]+[.][a-z]+" oninput="func()" required>
+    <br><br>
+	  <input type="password" placeholder="Enter Password" class="log" name="psw" required>
+		<hr>
+		<div style='color:thistle;font-size: 30px;'>
+			<b> <% if(details!=null) { %>
+  
+				 <%=details%>
+				 <% } %>
+			</b></div>
+			<hr>
+	  <button class="btn">Register</button>
+
+  </form>
+</div>

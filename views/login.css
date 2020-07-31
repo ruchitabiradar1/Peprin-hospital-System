@@ -1,0 +1,151 @@
+.blurdoc{
+    background-image: url(doctor.png);
+    background-size: cover;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.blureg
+{
+    background-image: url(dn.png);
+    background-size: cover;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;   
+}
+.blurnur
+{
+    background-image: url(nurse.png);
+    background-size: cover;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.form1
+{
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #0e0d0d;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width:450px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+
+
+}
+
+.form2
+{
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(119, 104, 104, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #0e0d0d;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width:450px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+
+
+}
+
+label{
+    margin-bottom: 1rem;
+    font-size: 25;
+    color: rgb(92, 9, 9);
+	font-family: 'Exo', sans-serif;
+	font-size: 30px;
+	font-weight: 400;
+}
+
+h1 {
+    margin-bottom: 2rem;
+    font-weight:bold;
+    font-family:'Muli';
+    font-size: 2em;
+    color: #4b0202;
+}
+
+
+
+.log
+{   
+    width: 450px;
+    height: 45px;
+	background: transparent;
+	border: 5px solid rgba(17, 1, 1, 0.6);
+    border-radius: 5px;
+    color: rgb(92, 9, 9);
+	font-family: 'Exo', sans-serif;
+	font-size: 25px;
+	font-weight: 400;
+	padding: 6px;
+}
+
+.rad
+{   
+    width: 225px;
+    border-radius: 3px;
+}
+::-webkit-input-placeholder{
+    color: rgba(97, 8, 8, 0.6);
+ }
+ 
+ ::-moz-input-placeholder{
+    color: rgba(75, 3, 3, 0.6);
+ }
+.btn{
+    
+    width: 450px;
+	height: 75px;
+	background: rgb(12, 11, 11);
+	border:1px solid rgb(7, 7, 7);
+	cursor: pointer;
+	border-radius: 5px;
+	color: #e7e3dd;
+	font-family: 'Exo', sans-serif;
+	font-size: 30px;
+	font-weight: 400;
+	padding: 6px;
+	margin-top: 10px;
+}
+
+input{
+    padding: 10px 20px;
+    
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Patient Vitals Form</title>
+    <link  href="/history.css"  rel="stylesheet"/>
+    
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="topnav">
+            <a href="home">Home</a>
+           
+            <a href="vitals">Patient Vital signs</a>
+            <a class="active" href="history">Vitals History</a>
+            <a href="index" style="float: right;" >Logout</a>
+          </div> 
+          <div class="blurhist"></div>
+
+          <div class="wrapper">
+         <div class="contact-form">
+          <form method="post" ngNativeValidate action="/his">
+        
+            <div class="input-fields">
+                <input id="pn" type="text" name="name" class="input" placeholder="Patient Name" onkeypress="return /[A-Za-z]/i.test(event.key)" autocomplete="off">
+                
+            </div>
+                
+       
+            <div style='color: #8B0000;'>
+                <b> <% if(patient!=null) { %>
+     
+                     <%=patient%>
+                     <% } %>
+                </b>
+            </div>
+            <div >
+                <% if(pdetails!=null) { %>
+                    <p><b>Name:</b>   <%= pdetails.user%></p><br>
+                    <p><b>Gender:</b>  <%= pdetails.gender%></p><br>
+                    <p><b>Date of birth:</b>  <%= pdetails.birthday%></p><br>
+                    <p><b>Phone Number:</b>  <%= pdetails.phone%></p><br>
+                    <p><b>Height:</b>  <%= pdetails.height%></p><br>
+                    <p><b>Weight:</b>  <%= pdetails.weight%></p><br>
+                    <p><b>Allergies:</b>  <%= pdetails.allergy%></p><br>
+                    <p><b>Diseases:</b>  <%= pdetails.disease%></p><br>
+                    <p><b>Illness:</b>  <%= pdetails.illness%></p><br>
+                    <p><b>Additional info:</b>  <%= pdetails.comment%></p><br>
+                    
+                <% } %>
+            </div>
+            
+            <br>
+            <div class="table">
+                <% if(details!=null) { %>
+                    <table align="center">
+                        <tr>
+                            <th>DateTime</th>
+                            <th>Temperature </th>
+                            <th>Blood Pressure  </th>
+                            <th>Pulse Rate </th>
+                        </tr>
+                        <% details.forEach(function(item){ %>
+                        <tr>
+                            <td><%= item.datetime%></td>
+                            <td><%= item.temp%></td>
+                            <td><%= item.bp %></td>
+                            <td><%= item.pulse%></td>
+                                    
+                        </tr>
+                        <% }) %>
+                    </table>
+                <% } %>
+            </div>
+
+
+
+
+            <button type="submit" name="Submit" class="btn" >Submit</button>
+          
+          
+        </div>
+
+        </form>
+    </body>
+</html>
